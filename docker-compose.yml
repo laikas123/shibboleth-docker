@@ -51,7 +51,7 @@ services:
       - ./webapps:/usr/local/tomcat/webapps
       - ./logs:/usr/local/tomcat/logs
       - ./shibboleth-idp:/opt/shibboleth-idp
-    entrypoint: ["/bin/sh", "-c", "cp /opt/shibboleth-idp/war/idp.war /usr/local/tomcat/webapps/idp.war && cp /opt/shibboleth-idp/jstl-3.0.0.jar /usr/local/tomcat/lib/jstl-3.0.0.jar && cp /opt/shibboleth-idp/jstl-3.0.0.jar /usr/local/tomcat/webapps/idp/WEB-INF/lib/jstl-3.0.0.jar && exec /usr/local/tomcat/bin/catalina.sh run"]
+    entrypoint: ["/bin/sh", "-c", "cp /opt/shibboleth-idp/jstl-3.0.0.jar /opt/shibboleth-idp/war/jstl-3.0.0.jar && jar -cvf /opt/shibboleth-idp/war/idp.war -C /opt/shibboleth-idp/war/ . && cp /opt/shibboleth-idp/war/idp.war /usr/local/tomcat/webapps/idp.war && cp /opt/shibboleth-idp/jstl-3.0.0.jar /usr/local/tomcat/lib/jstl-3.0.0.jar && cp /opt/shibboleth-idp/jstl-3.0.0.jar /usr/local/tomcat/webapps/idp/WEB-INF/lib/jstl-3.0.0.jar && exec /usr/local/tomcat/bin/catalina.sh run"]
     restart: unless-stopped
 
 volumes:

@@ -1,0 +1,52 @@
+services:
+  sp-openldap:
+    image: osixia/openldap:latest
+    container_name: sp-openldap
+    restart: unless-stopped
+    ports:
+      - '389:389'
+      - '636:636'
+    environment:
+      - LDAP_ORGANISATION=ScreenPal
+      - LDAP_DOMAIN=ldap-local.screenpal.com
+      - LDAP_ROOT=dc=ldap-local,dc=screenpal,dc=com
+      - LDAP_ADMIN_USERNAME=admin
+      - LDAP_ADMIN_PASSWORD=adminpassword
+      - LDAP_ADMIN_DN=cn=admin,dc=ldap-local,dc=screenpal,dc=com
+      - LDAP_PORT_NUMBER=389
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: '128m'
+        reservations:
+          memory: '32m'
+    volumes:
+      - './openldap_data/ldap:/var/lib/ldap'
+      - './openldap_data/slapd:/etc/ldap/slapd.d'
+  sp-phpldapadmin:
+    image: osixia/phpldapadmin:latest
+    container_name: sp-phpldapadmin
+    restart: unless-stopped
+    ports:
+      - '8181:80'
+    environment:
+      - PHPLDAPADMIN_LDAP_HOSTS=sp-openldap
+      - PHPLDAPADMIN_HTTPS=false
+      - LDAP_ENABLE_TLS=no
+    depends_on:
+      - sp-openldap
+  tomcat:
+    image: tomcat:10.1
+    container_name: tomcat_server
+    ports:
+      - "8080:8080"
+    environment:
+      - CATALINA_OPTS=-Xms512m -Xmx1024m
+    volumes:
+      - ./webapps:/usr/local/tomcat/webapps
+      - ./logs:/usr/local/tomcat/logs
+    restart: unless-stopped
+volumes:
+  openldap_data:
+    driver: local

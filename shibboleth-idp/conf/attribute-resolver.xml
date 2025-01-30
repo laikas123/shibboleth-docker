@@ -75,4 +75,22 @@ list of possible components and their options.
         </Attribute>
     </DataConnector>
 
+    <resolver:DataConnector id="myLDAP" xsi:type="LDAPDirectory"
+                            ldapURL="ldap://localhost:389"
+                            baseDN="dc=ldap-local,dc=screenpal,dc=com"
+                            principal="cn=admin,dc=ldap-local,dc=screenpal,dc=com"
+                            principalCredential="adminpassword"
+                            useStartTLS="false"
+                            connectTimeout="PT3S"
+                            responseTimeout="PT3S">
+
+        <ConnectionPool minPoolSize="3" maxPoolSize="10" blockWaitTime="PT3S" />
+
+        <FilterTemplate>
+            <![CDATA[
+            (uid=$resolutionContext.principal)
+        ]]>
+        </FilterTemplate>
+    </resolver:DataConnector>
+
 </AttributeResolver>

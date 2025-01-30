@@ -65,6 +65,7 @@ services:
                  cp -R /opt/idp-webapp/* /opt/shibboleth-idp/war && \
                  cd /opt/shibboleth-idp/war && jar -cvf idp.war . && \
                  cp /opt/shibboleth-idp/war/idp.war /usr/local/tomcat/webapps/idp.war && \
+                 mkdir -p /opt/shibboleth-idp/session-store && \
                  exec /usr/local/tomcat/bin/catalina.sh run"]
     restart: unless-stopped
 

@@ -1,3 +1,7 @@
+networks:
+  shibboleth-network:
+    driver: bridge
+
 services:
   sp-openldap:
     image: osixia/openldap:latest

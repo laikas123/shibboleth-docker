@@ -88,5 +88,5 @@
 
 <!--</MetadataProvider>-->
 
-<MetadataProvider id="ServiceProviderMetadata" xsi:type="FilesystemMetadataProvider"
+<MetadataProvider id="ScreenPalMetadata" xsi:type="FilesystemMetadataProvider"
                   metadataFile="/opt/shibboleth-idp/metadata/screenpal-metadata.xml"/>

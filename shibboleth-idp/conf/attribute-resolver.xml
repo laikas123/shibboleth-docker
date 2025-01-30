@@ -3,14 +3,13 @@
         xmlns="urn:mace:shibboleth:2.0:resolver"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns:resolver="urn:mace:shibboleth:2.0:resolver"
-        xmlns:dc="urn:mace:shibboleth:2.0:resolver:dc"
         xsi:schemaLocation="urn:mace:shibboleth:2.0:resolver http://shibboleth.net/schema/idp/shibboleth-attribute-resolver.xsd">
 
     <!-- Map "cn" (Full Name) from LDAP -->
     <AttributeDefinition id="cn" xsi:type="Simple">
+        <Dependency ref="myLDAP"/>  <!-- Dependency must be first -->
         <InputDataConnector ref="myLDAP" attributeNames="cn"/>
         <AttributeEncoder xsi:type="SAML2String" name="urn:oid:2.5.4.3"/>
-        <Dependency ref="myLDAP"/>
     </AttributeDefinition>
 
     <!-- ========================================== -->
@@ -28,10 +27,10 @@
 
         <ConnectionPool minPoolSize="5" maxPoolSize="20" blockWaitTime="PT10S"/>
 
-        <!-- Search LDAP by cn -->
+        <!-- Search LDAP by uid instead of cn -->
         <FilterTemplate>
             <![CDATA[
-            (cn=$resolutionContext.principal)
+            (uid=$resolutionContext.principal)
             ]]>
         </FilterTemplate>
     </resolver:DataConnector>

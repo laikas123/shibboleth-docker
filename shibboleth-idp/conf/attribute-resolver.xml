@@ -77,7 +77,7 @@ list of possible components and their options.
     </DataConnector>
 
     <resolver:DataConnector id="myLDAP" xsi:type="LDAPDirectory"
-                            ldapURL="ldap://localhost:389"
+                            ldapURL="ldap://sp-openldap:389"
                             baseDN="dc=ldap-local,dc=screenpal,dc=com"
                             principal="cn=admin,dc=ldap-local,dc=screenpal,dc=com"
                             principalCredential="adminpassword"

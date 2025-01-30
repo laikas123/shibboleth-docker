@@ -55,6 +55,8 @@ services:
       - ./misc:/opt/misc
     entrypoint: ["/bin/sh", "-c",
                  "cp /opt/misc/setenv.sh /usr/local/tomcat/bin/setenv.sh && \
+                 mkdir -p /usr/local/tomcat/conf/Catalina/localhost && \
+                 cp /opt/misc/idp.xml /usr/local/tomcat/conf/Catalina/localhost/idp.xml && \
                  /opt/shibboleth-idp/bin/build.sh && \
                  cp -R /opt/idp-webapp/* /opt/shibboleth-idp/war && \
                  cd /opt/shibboleth-idp/war && jar -cvf idp.war . && \

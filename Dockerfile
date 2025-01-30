@@ -10,8 +10,7 @@ RUN echo "Checking Java version..." && java -version
 RUN echo "JAVA_HOME is set to: $JAVA_HOME" && ls -l $JAVA_HOME
 RUN echo "PATH is set to: $PATH"
 
-RUN apt update
-RUN apt install nano -y
+RUN apt update && apt install -y nano openjdk-17-jdk
 # Ensure Tomcat starts correctly
 #CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]
 

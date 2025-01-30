@@ -67,15 +67,6 @@ list of possible components and their options.
     <!--      Data Connectors                       -->
     <!-- ========================================== -->
 
-    <DataConnector id="staticAttributes" xsi:type="Static" exportAttributes="schacHomeOrganization">
-        <Attribute id="schacHomeOrganization">
-            <Value>%{idp.scope}</Value>
-        </Attribute>
-        <Attribute id="affiliation">
-            <Value>member</Value>
-        </Attribute>
-    </DataConnector>
-
     <resolver:DataConnector id="myLDAP" xsi:type="LDAPDirectory"
                             ldapURL="ldap://sp-openldap:389"
                             baseDN="dc=ldap-local,dc=screenpal,dc=com"

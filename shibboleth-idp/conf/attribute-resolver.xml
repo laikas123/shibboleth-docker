@@ -16,7 +16,7 @@
 
     <resolver:DataConnector id="myLDAP" xsi:type="LDAPDirectory"
                             ldapURL="ldap://sp-openldap:389"
-                            baseDN="ou=Users,dc=ldap-local,dc=screenpal,dc=com"
+                            baseDN="dc=ldap-local,dc=screenpal,dc=com"
                             principal="cn=admin,dc=ldap-local,dc=screenpal,dc=com"
                             principalCredential="adminpassword"
                             useStartTLS="false"

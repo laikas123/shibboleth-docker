@@ -6,21 +6,17 @@
         xmlns:dc="urn:mace:shibboleth:2.0:resolver:dc"
         xsi:schemaLocation="urn:mace:shibboleth:2.0:resolver http://shibboleth.net/schema/idp/shibboleth-attribute-resolver.xsd">
 
-    <!-- ========================================== -->
-    <!--      Attribute Definitions (Mapped to LDAP) -->
-    <!-- ========================================== -->
-
     <!-- Map "uid" attribute from LDAP -->
     <AttributeDefinition id="uid" xsi:type="Simple">
         <InputDataConnector ref="myLDAP" attributeNames="uid" />
-        <AttributeEncoder xsi:type="SAML2StringNameID" nameFormat="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"/>
+        <AttributeEncoder xsi:type="SAML2NameID" nameFormat="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"/>
         <Dependency ref="myLDAP" />
     </AttributeDefinition>
 
     <!-- Set eduPersonPrincipalName as "uid@ldap-local.screenpal.com" -->
     <AttributeDefinition id="eduPersonPrincipalName" xsi:type="Scoped" scope="ldap-local.screenpal.com">
         <InputDataConnector ref="myLDAP" attributeNames="uid" />
-        <AttributeEncoder xsi:type="SAML2StringNameID" nameFormat="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"/>
+        <AttributeEncoder xsi:type="SAML2NameID" nameFormat="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"/>
         <Dependency ref="myLDAP" />
     </AttributeDefinition>
 

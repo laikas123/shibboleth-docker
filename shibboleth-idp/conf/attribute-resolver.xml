@@ -14,7 +14,8 @@ list of possible components and their options.
 -->
 <AttributeResolver
         xmlns="urn:mace:shibboleth:2.0:resolver" 
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:resolver="urn:mace:shibboleth:2.0:resolver"
         xsi:schemaLocation="urn:mace:shibboleth:2.0:resolver http://shibboleth.net/schema/idp/shibboleth-attribute-resolver.xsd">
 
 

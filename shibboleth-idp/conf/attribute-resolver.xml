@@ -85,7 +85,7 @@ list of possible components and their options.
                             connectTimeout="PT3S"
                             responseTimeout="PT3S">
 
-        <ConnectionPool minPoolSize="3" maxPoolSize="10" blockWaitTime="PT3S" />
+        <ConnectionPool minPoolSize="5" maxPoolSize="20" blockWaitTime="PT10S"/>
 
         <FilterTemplate>
             <![CDATA[

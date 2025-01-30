@@ -7,7 +7,6 @@
 
     <!-- Map "cn" (Full Name) from LDAP -->
     <AttributeDefinition id="cn" xsi:type="Simple">
-        <Dependency ref="myLDAP"/>  <!-- Dependency must be first -->
         <InputDataConnector ref="myLDAP" attributeNames="cn"/>
     </AttributeDefinition>
 

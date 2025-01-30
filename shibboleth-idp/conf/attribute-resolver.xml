@@ -12,58 +12,58 @@
 
     <!-- Map "uid" attribute from LDAP -->
     <AttributeDefinition id="uid" xsi:type="Simple">
-        <Dependency ref="myLDAP" />
         <InputDataConnector ref="myLDAP" attributeNames="uid" />
         <AttributeEncoder xsi:type="SAML2StringNameID" nameFormat="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"/>
+        <Dependency ref="myLDAP" />
     </AttributeDefinition>
 
     <!-- Set eduPersonPrincipalName as "uid@ldap-local.screenpal.com" -->
     <AttributeDefinition id="eduPersonPrincipalName" xsi:type="Scoped" scope="ldap-local.screenpal.com">
-        <Dependency ref="myLDAP" />
         <InputDataConnector ref="myLDAP" attributeNames="uid" />
         <AttributeEncoder xsi:type="SAML2StringNameID" nameFormat="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"/>
+        <Dependency ref="myLDAP" />
     </AttributeDefinition>
 
     <!-- Map "cn" (Full Name) from LDAP -->
     <AttributeDefinition id="cn" xsi:type="Simple">
-        <Dependency ref="myLDAP" />
         <InputDataConnector ref="myLDAP" attributeNames="cn" />
         <AttributeEncoder xsi:type="SAML2String" name="urn:oid:2.5.4.3"/>
+        <Dependency ref="myLDAP" />
     </AttributeDefinition>
 
     <!-- Map "givenname" (First Name) from LDAP -->
     <AttributeDefinition id="givenName" xsi:type="Simple">
-        <Dependency ref="myLDAP" />
         <InputDataConnector ref="myLDAP" attributeNames="givenname" />
         <AttributeEncoder xsi:type="SAML2String" name="urn:oid:2.5.4.42"/>
+        <Dependency ref="myLDAP" />
     </AttributeDefinition>
 
     <!-- Map "sn" (Last Name) from LDAP -->
     <AttributeDefinition id="sn" xsi:type="Simple">
-        <Dependency ref="myLDAP" />
         <InputDataConnector ref="myLDAP" attributeNames="sn" />
         <AttributeEncoder xsi:type="SAML2String" name="urn:oid:2.5.4.4"/>
+        <Dependency ref="myLDAP" />
     </AttributeDefinition>
 
     <!-- Map "gidnumber" (Group ID) from LDAP -->
     <AttributeDefinition id="gidNumber" xsi:type="Simple">
-        <Dependency ref="myLDAP" />
         <InputDataConnector ref="myLDAP" attributeNames="gidnumber" />
         <AttributeEncoder xsi:type="SAML2String" name="urn:oid:1.3.6.1.1.1.1.2"/>
+        <Dependency ref="myLDAP" />
     </AttributeDefinition>
 
     <!-- Map "homedirectory" from LDAP -->
     <AttributeDefinition id="homeDirectory" xsi:type="Simple">
-        <Dependency ref="myLDAP" />
         <InputDataConnector ref="myLDAP" attributeNames="homedirectory" />
         <AttributeEncoder xsi:type="SAML2String" name="urn:oid:1.3.6.1.1.1.1.3"/>
+        <Dependency ref="myLDAP" />
     </AttributeDefinition>
 
     <!-- Map "loginshell" from LDAP -->
     <AttributeDefinition id="loginShell" xsi:type="Simple">
-        <Dependency ref="myLDAP" />
         <InputDataConnector ref="myLDAP" attributeNames="loginshell" />
         <AttributeEncoder xsi:type="SAML2String" name="urn:oid:1.3.6.1.1.1.1.4"/>
+        <Dependency ref="myLDAP" />
     </AttributeDefinition>
 
     <!-- ========================================== -->

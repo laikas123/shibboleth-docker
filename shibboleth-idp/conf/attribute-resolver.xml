@@ -8,6 +8,7 @@
     <!-- Map "cn" (Full Name) from LDAP -->
     <AttributeDefinition id="cn" xsi:type="Simple">
         <InputDataConnector ref="myLDAP" attributeNames="cn"/>
+        <AttributeEncoder xsi:type="SAML2String" name="urn:oid:2.5.4.3"/>
     </AttributeDefinition>
 
     <!-- ========================================== -->

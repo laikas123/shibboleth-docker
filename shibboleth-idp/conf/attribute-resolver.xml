@@ -9,7 +9,6 @@
     <AttributeDefinition id="cn" xsi:type="Simple">
         <Dependency ref="myLDAP"/>  <!-- Dependency must be first -->
         <InputDataConnector ref="myLDAP" attributeNames="cn"/>
-        <AttributeEncoder xsi:type="SAML2String" name="urn:oid:2.5.4.3"/>
     </AttributeDefinition>
 
     <!-- ========================================== -->

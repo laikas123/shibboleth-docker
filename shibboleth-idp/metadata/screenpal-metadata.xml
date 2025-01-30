@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="https://screencast-o-matic.com/">
+    <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+        <md:KeyDescriptor use="signing">
+            <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                <ds:X509Data>
+                    <ds:X509Certificate>MIIDYDCCAkgCCQCoDdEGPQ9QRDANBgkqhkiG9w0BAQUFADByMQswCQYDVQQGEwJVUzETMBEGA1UECAwKV2FzaGluZ3RvbjEQMA4GA1UEBwwHU2VhdHRsZTEbMBkGA1UECgwSU2NyZWVuY2FzdC1PLU1hdGljMR8wHQYDVQQDDBZzY3JlZW5jYXN0LW8tbWF0aWMuY29tMB4XDTE4MTEwODAwMTIwNVoXDTI4MTEwNTAwMTIwNVowcjELMAkGA1UEBhMCVVMxEzARBgNVBAgMCldhc2hpbmd0b24xEDAOBgNVBAcMB1NlYXR0bGUxGzAZBgNVBAoMElNjcmVlbmNhc3QtTy1NYXRpYzEfMB0GA1UEAwwWc2NyZWVuY2FzdC1vLW1hdGljLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALEzMN5B95k4fOECzZJNgrHR+t/uqbHEOkd8bLm6XYnXZyC5lNfcAfv4iuyM2dXCHbeg1n7VT0qtHnKItG2HQuMWHWBKCfS8M2mX4D/e0APOOIChWmdf9YbjJWvRNxf3LuQ6fmLLl2Rvs3h5YxPwz66oB6d8I0ZC6jaaZ88JU6bW8et6MvM+WtBG9KvqRKe5yzlqkOoF6+DZnEtL52uC/zrvzgauXRj8VfaMyram6RLBE/icLexYRIdSkVK5qSkGJE8RPt8Ad3qIzuJZki8i5JWqEqSydrSNByo1/G3+M696RX9ktBQ8HFa0fJhbjzN0V0XkHVV/9QM4hCeFY7LZf3UCAwEAATANBgkqhkiG9w0BAQUFAAOCAQEAnDmYLISPzPP8fopNGTsCyUGnW+hYcI3dH4Pr4lFzin62sF5YwFvG3yxZLwXJvD7ct0xVgK06OIa15Z5vtRBuoyv4M6eTuYcA2x9RPpbP1t9vQbxm1kssLW26VDmMHZplV76FMH888plhB1PEhHiDQf9Dw2JwdB2h2K092/COYSohGQ6piGux8tOrYib2KJGadtArAnh3/idThRVcbtHP1VsAj0KmBMtxs3hsxxdymL0riTtm1Eh/8qqvRQCqZG7JG3IS26kQbze7bEMdoPdSSAXA5VC7V6p3oEEm86r8rJPICCzbNABr8kZQMaVqcG16fsLFSBAsEZ8Gg5LneYAtww==</ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </md:KeyDescriptor>
+        <md:KeyDescriptor use="encryption">
+            <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                <ds:X509Data>
+                    <ds:X509Certificate>MIIDYDCCAkgCCQCoDdEGPQ9QRDANBgkqhkiG9w0BAQUFADByMQswCQYDVQQGEwJVUzETMBEGA1UECAwKV2FzaGluZ3RvbjEQMA4GA1UEBwwHU2VhdHRsZTEbMBkGA1UECgwSU2NyZWVuY2FzdC1PLU1hdGljMR8wHQYDVQQDDBZzY3JlZW5jYXN0LW8tbWF0aWMuY29tMB4XDTE4MTEwODAwMTIwNVoXDTI4MTEwNTAwMTIwNVowcjELMAkGA1UEBhMCVVMxEzARBgNVBAgMCldhc2hpbmd0b24xEDAOBgNVBAcMB1NlYXR0bGUxGzAZBgNVBAoMElNjcmVlbmNhc3QtTy1NYXRpYzEfMB0GA1UEAwwWc2NyZWVuY2FzdC1vLW1hdGljLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALEzMN5B95k4fOECzZJNgrHR+t/uqbHEOkd8bLm6XYnXZyC5lNfcAfv4iuyM2dXCHbeg1n7VT0qtHnKItG2HQuMWHWBKCfS8M2mX4D/e0APOOIChWmdf9YbjJWvRNxf3LuQ6fmLLl2Rvs3h5YxPwz66oB6d8I0ZC6jaaZ88JU6bW8et6MvM+WtBG9KvqRKe5yzlqkOoF6+DZnEtL52uC/zrvzgauXRj8VfaMyram6RLBE/icLexYRIdSkVK5qSkGJE8RPt8Ad3qIzuJZki8i5JWqEqSydrSNByo1/G3+M696RX9ktBQ8HFa0fJhbjzN0V0XkHVV/9QM4hCeFY7LZf3UCAwEAATANBgkqhkiG9w0BAQUFAAOCAQEAnDmYLISPzPP8fopNGTsCyUGnW+hYcI3dH4Pr4lFzin62sF5YwFvG3yxZLwXJvD7ct0xVgK06OIa15Z5vtRBuoyv4M6eTuYcA2x9RPpbP1t9vQbxm1kssLW26VDmMHZplV76FMH888plhB1PEhHiDQf9Dw2JwdB2h2K092/COYSohGQ6piGux8tOrYib2KJGadtArAnh3/idThRVcbtHP1VsAj0KmBMtxs3hsxxdymL0riTtm1Eh/8qqvRQCqZG7JG3IS26kQbze7bEMdoPdSSAXA5VC7V6p3oEEm86r8rJPICCzbNABr8kZQMaVqcG16fsLFSBAsEZ8Gg5LneYAtww==</ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </md:KeyDescriptor>
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://screencast-o-matic.com/saml/sp/logout"/>
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://screencast-o-matic.com/saml/sp/logout"/>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://screencast-o-matic.com/saml/sp" index="0"/>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://screencast-o-matic.com/saml/sp/1" index="1"/>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://screencast-o-matic.com/saml/sp" index="2"/>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://screencast-o-matic.com/saml/sp/1/artifact" index="3"/>
+    </md:SPSSODescriptor>
+    <md:ContactPerson contactType="technical">
+        <md:GivenName>Screencast</md:GivenName>
+        <md:SurName>Support</md:SurName>
+        <md:EmailAddress>support@screenpal.com</md:EmailAddress>
+    </md:ContactPerson>
+</md:EntityDescriptor>

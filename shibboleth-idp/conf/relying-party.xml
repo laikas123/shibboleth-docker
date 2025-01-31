@@ -58,7 +58,7 @@
 
     <util:list id="shibboleth.RelyingPartyOverrides">
 
-        <bean id="ScreenPalSP" parent="RelyingPartyByName" c:relyingPartyIds="https://local.screenpal.com">
+        <bean id="ScreenPalSP" parent="RelyingPartyByName" c:relyingPartyIds="https://local.screencast-o-matic.com">
             <property name="profileConfigurations">
                 <list>
                     <bean parent="SAML2.SSO" />
